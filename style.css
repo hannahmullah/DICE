@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    font-family: 'Brandon Grotesque', Arial, sans-serif;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    background-image: linear-gradient(180deg, #FFB7B7 0%, #727272 100%), radial-gradient(60.91% 100% at 50% 0%, #FFD1D1 0%, #260000 100%), linear-gradient(238.72deg, #FFDDDD 0%, #720066 100%), linear-gradient(127.43deg, #00FFFF 0%, #FF4444 100%), radial-gradient(100.22% 100% at 70.57% 0%, #FF0000 0%, #00FFE0 100%), linear-gradient(127.43deg, #B7D500 0%, #3300FF 100%);
+    background-blend-mode: screen, overlay, hard-light, color-burn, color-dodge, normal;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    color: #2376ae;
+}
+
+
+#startBtn,
+#restartBtn {
+    background-image: linear-gradient(220deg, #2376ae 0%, #c16ecf 100%);
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    border: none;
+    width: 40px;
+}
+
+#restartBtn {
+    display: none;
+}
+
+.diceContainer {
+    height: 550px;
+    width: 98%;
+    position: relative;
+    margin: 0 auto 40px;
+    border: 5px solid white;
+
+    perspective: 1000px;
+    perspective-origin: 50% 100%;
+
+}
+
+#dice {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    transform-style: preserve-3d;
+    transition: transform 6s;
+}
+
+#diceWrapper {
+    height: 425px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#startText {
+    display: none;
+    justify-content: space-around;
+}
+
+#dice:hover {
+    cursor: pointer;
+}
+
+#dice .one {
+    transform:
+        translateZ(100px);
+}
+
+#dice .two {
+    transform:
+        rotateX(-180deg) translateZ(100px);
+}
+
+#dice .three {
+    transform:
+        rotateY(90deg) translateZ(100px);
+}
+
+#dice .four {
+    transform:
+        rotateY(-90deg) translateZ(100px);
+}
+
+#dice .five {
+    transform:
+        rotateX(90deg) translateZ(100px);
+}
+
+#dice .six {
+    transform:
+        rotateX(-90deg) translateZ(100px);
+}
+
+#dice .diceSide {
+    background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    border-radius: 10%;
+
+    margin: 0 auto;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 500%;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.dot {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.one .dot1 {
+    top: 85px;
+    left: 85px;
+}
+
+.two .dot1 {
+    top: 45px;
+    left: 45px;
+}
+
+.two .dot2 {
+    top: 125px;
+    left: 125px;
+}
+
+.three .dot1 {
+    top: 45px;
+    left: 45px;
+}
+
+.three .dot2 {
+    top: 85px;
+    left: 85px;
+}
+
+.three .dot3 {
+    top: 125px;
+    left: 125px;
+}
+
+.four .dot1 {
+    top: 45px;
+    left: 45px;
+}
+
+.four .dot2 {
+    top: 45px;
+    left: 125px;
+}
+
+.four .dot3 {
+    top: 125px;
+    left: 45px;
+}
+
+.four .dot4 {
+    top: 125px;
+    left: 125px;
+}
+
+.five .dot1 {
+    top: 45px;
+    left: 45px;
+}
+
+.five .dot2 {
+    top: 45px;
+    left: 125px;
+}
+
+.five .dot3 {
+    top: 85px;
+    left: 85px;
+}
+
+.five .dot4 {
+    top: 125px;
+    left: 45px;
+}
+
+.five .dot5 {
+    top: 125px;
+    left: 125px;
+}
+
+.six .dot1 {
+    top: 45px;
+    left: 45px;
+}
+
+.six .dot2 {
+    top: 45px;
+    left: 85px;
+}
+
+.six .dot3 {
+    top: 45px;
+    left: 125px;
+}
+
+.six .dot4 {
+    top: 125px;
+    left: 45px;
+}
+
+.six .dot5 {
+    top: 125px;
+    left: 85px;
+}
+
+.six .dot6 {
+    top: 125px;
+    left: 125px;
+}
